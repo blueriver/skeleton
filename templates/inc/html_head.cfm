@@ -34,14 +34,6 @@
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/layout.css">
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/chosen/chosen.css">
 
-	<!--- Theme-Specific Styles --->
-	<!--- ** Optimized Method of CSS Inclusion ** --->
-	<!---<cf_CacheOMatic key="globalheadercss">
-	#$.static()
-		.include('/css/')
-		.include('/assets/chosen/chosen.css')
-		.renderIncludes('css')#
-	</cf_CacheOMatic>--->
 	<cfif cgi.http_user_agent contains 'msie'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

@@ -1,5 +1,6 @@
-/*
+/**
 * Custom modifications to Skeleton for Mura CMS
+*
 */
 
 
@@ -117,9 +118,7 @@ img {
 
 /* grid example
 ****************************************/
-#grid {
-	overflow:hidden;
-}
+#grid {overflow:hidden;}
 #grid .column, #grid .columns {
     background: none repeat scroll 0 0 #DDDDDD;
     border-radius: 2px 2px 2px 2px;

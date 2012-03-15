@@ -29,13 +29,6 @@
 	<script src="#$.siteConfig('themeAssetPath')#/js/tabs.js"></script>
 	<script src="#$.siteConfig('themeAssetPath')#/assets/chosen/chosen.jquery.min.js"></script>
 	<script src="#$.siteConfig('themeAssetPath')#/js/extended.js"></script>
-	<!---<cf_CacheOMatic key="globalfooterjs">
-	#$.static()
-		.include('/js/tabs.js')
-		.include('/assets/chosen/chosen.jquery.min.js')
-		.include('/js/extended.js')
-		.renderIncludes('js')#
-	</cf_CacheOMatic>--->
 </body>
 </html>
 </cfoutput>
