@@ -72,6 +72,12 @@ hr.large {
 dt.releaseDate {
 	font-size:1em;
 }
+label {
+	padding-right:1em;
+}
+form[name='loginForm'] label, form#login label {
+	display:inline;
+}
 
 /* footer
 ***********************/
