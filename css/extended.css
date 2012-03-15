@@ -24,7 +24,7 @@ ul#navPrimary.clean li {
 ul#navPrimary.clean li.last {
 	padding-right:0;
 }
-
+/* tabbed primary nav (extra setting to accomodate default mura output) */
 ul.tabs li a.current, ul.tabs li.current a {
 	background: #fff;
 	height: 30px;
@@ -48,8 +48,16 @@ a:hover, a:active, a.current, li.current a {
 	text-decoration:none;
 	color:#999;
 }
-
-
+.logo {
+	margin-top:1.5em;
+}
+.logo a {
+	border:none;
+	text-decoration:none;
+}
+/*.logo a:hover {
+	color:#000;
+}*/
 hr.large {
 	background: none repeat scroll 0 0 #ebebeb;
 	border:medium;

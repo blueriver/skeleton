@@ -7,7 +7,8 @@
 			<div class="row">
 				<div class="sixteen columns">
 					<hgroup>
-						<h1 class="remove-bottom" style="margin-top: 40px">#HTMLEditFormat($.siteConfig('site'))#</h1>
+						<h1 class="remove-bottom logo">
+							<cfif $.content('contentid') eq '00000000000000000000000000000000001'>#HTMLEditFormat($.siteConfig('site'))#<cfelse><a href="#$.createHREF(filename='')#">#HTMLEditFormat($.siteConfig('site'))#</a></cfif></h1>
 						<cfif len($.siteConfig('tagline'))><h5 class="tagline">#$.siteConfig('tagline')#</h5></cfif>
 					</hgroup>
 					<hr class="large">
@@ -20,7 +21,7 @@
 								,displayHome='Always'
 								,closePortals=true
 								,showCurrentChildrenOnly=false
-								,class=Iif(IsBoolean($.siteConfig('skeletonUseTabbedNav') and $.siteConfig('skeletonUseTabbedNav'), DE('tabs'), DE('clean'))
+								,class=Iif(YesNoFormat($.siteConfig('skeletonUseTabbedNav')), DE('tabs'), DE('clean'))
 							)#
 							<!---
 								Optional named arguments for Primary Nav are:
@@ -28,6 +29,7 @@
 									openPortals/closePortals = 'contentid,contentid'
 									(i.e. show specific sub-content in dropdown nav)
 							--->
+							<cfif not YesNoFormat($.siteConfig('skeletonUseTabbedNav'))><hr></cfif>
 						</cf_cacheomatic>
 					</nav>
 					<!--- Dropdown Nav: this will display when screen width is less than 768 --->
