@@ -1,0 +1,129 @@
+/*
+* Custom modifications to Skeleton for Mura CMS
+*/
+
+
+/* #Defaults
+================================================== */
+nav#navWide {
+	display:block;
+}
+nav#navNarrow {
+	display:none;
+}
+
+/* navPrimary
+***********************/
+ul#navPrimary.clean {
+	padding-bottom:30px;
+}
+ul#navPrimary.clean li {
+	float:left;
+	padding-right:1em;
+}
+ul#navPrimary.clean li.last {
+	padding-right:0;
+}
+
+ul.tabs li a.current, ul.tabs li.current a {
+	background: #fff;
+	height: 30px;
+	position: relative;
+	top: -4px;
+	padding-top: 4px;
+	border-left-width: 1px;
+	margin: 0 0 0 -1px;
+	color: #111;
+	-moz-border-radius-topleft: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+	-moz-border-radius-topright: 2px;
+	-webkit-border-top-right-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+/* @end navPrimary */
+
+a:hover, a:active, a.current, li.current a {
+	text-decoration:none;
+	color:#999;
+}
+
+
+hr.large {
+	background: none repeat scroll 0 0 #ebebeb;
+	border:medium;
+	height:0.75em;
+	margin:2em 0;
+}
+.code {
+	background-color: #F8F8FF;
+	border:1px solid #DDDDDD;
+	padding:1em;
+}
+dt.releaseDate {
+	font-size:1em;
+}
+
+/* footer
+***********************/
+footer {
+	font-size:0.9em
+}
+footer .navUtility {
+	float:left;
+}
+footer .navUtility li {
+	padding:0 0.5em;
+	display:inline;
+}
+footer .navUtility li.first {
+	padding-left:0;
+}
+footer .navUtility li.last {
+	border-right:none;
+}
+footer p.copyright {
+	float:right;
+}
+/* @end footer */
+
+img {
+	height:auto;
+	max-width:100%;
+}
+.resize {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 80px;
+	width: 80px;
+	background: url(../images/resize.png);
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+		
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		nav#navWide {display:none;}
+		ul#navPrimary li {
+			float:none;
+			padding-right:0;
+		}
+		nav#navNarrow {display:block;}
+		footer p.copyright {clear:both;display:block;float:none;}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}

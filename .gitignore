@@ -1,0 +1,9 @@
+*~
+*_notes/
+Thumbs.db
+.DS_Store
+/compiled
+/css/base.less.css
+/css/extended.less.css
+/css/layout.less.css
+/css/skeleton.less.css
