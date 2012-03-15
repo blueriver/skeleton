@@ -115,6 +115,28 @@ img {
 	background: url(../images/resize.png);
 }
 
+/* grid example
+****************************************/
+#grid {
+	overflow:hidden;
+}
+#grid .column, #grid .columns {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border-radius: 2px 2px 2px 2px;
+    color: #555555;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#grid .column:hover, #grid .columns:hover {
+    background: none repeat scroll 0 0 #BBBBBB;
+    color: #333333;
+}
+
 /* #Media Queries
 ================================================== */
 
