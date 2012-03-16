@@ -34,7 +34,7 @@
 		,includeAllByDefault=true
 	)
 		.include('/assets/css/')
-		.include('/assets/chosen/chosen.less')
+		.include('/assets/chosen/chosen.css')
 		.renderIncludes('css')#
 	</cf_CacheOMatic>
 
