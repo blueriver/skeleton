@@ -3,7 +3,7 @@
 Thumbs.db
 .DS_Store
 /compiled
-/css/base.less.css
-/css/extended.less.css
-/css/layout.less.css
-/css/skeleton.less.css
+/assets/css/base.less.css
+/assets/css/skeleton.less.css
+/assets/css/layout.less.css
+/assets/css/extended.less.css

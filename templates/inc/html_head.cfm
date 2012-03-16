@@ -31,10 +31,10 @@
 	#$.static(
 		cssDirectory='assets'
 		,jsDirectory='assets'
-		,includeAllByDefault=false
+		,includeAllByDefault=true
 	)
 		.include('/assets/css/')
-		.include('/assets/chosen/chosen.css')
+		.include('/assets/chosen/chosen.less')
 		.renderIncludes('css')#
 	</cf_CacheOMatic>
 
