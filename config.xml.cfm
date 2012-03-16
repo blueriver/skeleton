@@ -31,6 +31,20 @@
 					message=""
 					optionList="true^false"
 					optionLabelList="Yes^No" />
+					
+				<!-- displayResizeImage -->
+				<attribute 
+					name="displayResizeImage" 
+					label="Display Resize Image?"
+					hint="If Yes, will display a Resize image in the lower right hand corner of the screen."
+					type="RadioGroup"
+					defaultValue="true"
+					required="false"  
+					validation="" 
+					regex=""
+					message=""
+					optionList="true^false"
+					optionLabelList="Yes^No" />
 
 			</attributeset>
 		</extension>

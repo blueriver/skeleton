@@ -23,12 +23,20 @@
 			</div><!--- /row --->
 		</footer>
 	</div><!--- /container --->
-	<div class="resize"></div>
+
+	<cfif YesNoFormat($.siteConfig('displayResizeImage'))>
+		<div class="resize"></div>
+	</cfif>
+
 	<!-- JS
 	================================================== -->
-	<script src="#$.siteConfig('themeAssetPath')#/js/tabs.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/assets/chosen/chosen.jquery.min.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/js/extended.js"></script>
+	<cf_CacheOMatic key="globalfooterjs">
+	#$.static()
+		.include('/assets/js/tabs.js')
+		.include('/assets/chosen/chosen.jquery.min.js')
+		.include('/assets/js/extended.js')
+		.renderIncludes('js')#
+	</cf_CacheOMatic>
 </body>
 </html>
 </cfoutput>

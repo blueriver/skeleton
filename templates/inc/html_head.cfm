@@ -1,4 +1,3 @@
-<!--- html_head.cfm --->
 <cfoutput>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -18,21 +17,26 @@
 	<title>#HTMLEditFormat($.content('HTMLTitle'))# - #HTMLEditFormat($.siteConfig('site'))#</title>
 
 	<!-- Mobile Specific Metas
-  ================================================== -->
+	================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- CSS
-  ================================================== -->
-
+	================================================== -->
 	<!--- Mura-Specific Styles --->	
 	<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/reset.min.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="#$.siteConfig('assetPath')#/css/mura.min.css" type="text/css" media="all" />
 
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/base.css">
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/extended.css">
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/skeleton.css">
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/layout.css">
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/chosen/chosen.css">
+	<!--- Theme-Specific Styles --->
+	<cf_CacheOMatic key="globalheadercss">
+	#$.static(
+		cssDirectory='assets'
+		,jsDirectory='assets'
+		,includeAllByDefault=false
+	)
+		.include('/assets/css/')
+		.include('/assets/chosen/chosen.css')
+		.renderIncludes('css')#
+	</cf_CacheOMatic>
 
 	<cfif cgi.http_user_agent contains 'msie'>
 	<!--[if lt IE 9]>
@@ -47,11 +51,14 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="#$.siteConfig('themeAssetPath')#/images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="#$.siteConfig('themeAssetPath')#/images/apple-touch-icon-114x114.png">
 	
+	<!-- RSS
+	================================================== -->
 	<cfset rs=$.getBean('feedManager').getFeeds($.event('siteID'),'Local',true,true) />
 	<cfloop query="rs">
 	<link rel="alternate" type="application/rss+xml" title="#HTMLEditFormat($.siteConfig('site'))# - #HTMLEditFormat(rs.name)#" href="#XMLFormat('http://#listFirst(cgi.http_host,":")##$.globalConfig('context')#/tasks/feed/?feedID=#rs.feedID#')#" /></cfloop>
-	
-	<!--- jQuery --->
+
+	<!-- jQuery
+	================================================== -->
 	<script type="text/javascript" src="#$.siteConfig('assetPath')#/jquery/jquery.js"></script>
 
 </head>
