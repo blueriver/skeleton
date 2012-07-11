@@ -9,19 +9,19 @@
 					<hgroup>
 						<h1 class="remove-bottom logo">
 							<cfif $.content('contentid') eq '00000000000000000000000000000000001'>#HTMLEditFormat($.siteConfig('site'))#<cfelse><a href="#$.createHREF(filename='')#">#HTMLEditFormat($.siteConfig('site'))#</a></cfif></h1>
-						<cfif len($.siteConfig('tagline'))><h5 class="tagline">#$.siteConfig('tagline')#</h5></cfif>
+						<cfif len($.siteConfig('tagline'))><h5 class="tagline">#HTMLEditFormat($.siteConfig('tagline'))#</h5></cfif>
 					</hgroup>
 					<hr class="large">
 					<!--- Standard Nav: displays when screen width is greater than 767 --->
 					<nav id="navWide">
-						<cf_CacheOMatic key="dspPrimaryNav#request.contentBean.getcontentID()#">
+						<cf_CacheOMatic key="dspPrimaryNav#$.content('contentid')#">
 							#$.dspPrimaryNav(
 								viewDepth=0
 								,id='navPrimary'
 								,displayHome='Always'
 								,closePortals=true
 								,showCurrentChildrenOnly=false
-								,class=Iif(YesNoFormat($.siteConfig('skeletonUseTabbedNav')), DE('tabs'), DE('clean'))
+								,class=IIf(YesNoFormat($.siteConfig('skeletonUseTabbedNav')), DE('tabs'), DE('clean'))
 							)#
 							<!---
 								Optional named arguments for Primary Nav are:
